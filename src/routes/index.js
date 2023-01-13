@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NormalLayout from "../components/layouts/NormalLayout";
+import ForgotPassword from "../pages/ForgotPassword";
 import BlankPage from "../pages/BlankPage";
 import FavouritePage from "../pages/Favourite";
 import HomePage from "../pages/Home";
@@ -23,6 +24,7 @@ function AllRoute() {
           <Route path="/favourite" element={<FavouritePage />} />
           <Route path="/emptyPage" element={<EmptyPage />} />
           <Route path="/blankPage" element={<BlankPage />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
         </Route>
       </Routes>
     </BrowserRouter>

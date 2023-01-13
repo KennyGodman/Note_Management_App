@@ -59,10 +59,6 @@ function SignUpPage() {
                   )}
                 </Field>
 
-                <p className={styles.forgot}>
-                  <Link to="#">Forgot Password?</Link>
-                </p>
-
                 <div className="mt-40">
                   <Button text="Sign up" />
                 </div>

@@ -8,11 +8,14 @@ function BlankPage() {
   return (
     <div className="index">
       <div className={styles.container}>
-        <h1>Write something here....</h1>
+        <h1> Write something here....</h1>
       </div>
       <div>
         <form className={styles.form}>
-          <h1>Topic</h1>
+          <h1>Topic </h1>
+          <div className="topic">
+            <input type="text" name="topic" required></input>
+          </div>
           <textarea id="review" name="reviews" rows="10" cols="100"></textarea>
           <button type="submit" className={styles.saved}>
             <Link to="/"> HomePage</Link> <h2>Save</h2>

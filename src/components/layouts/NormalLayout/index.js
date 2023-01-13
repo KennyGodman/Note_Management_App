@@ -63,7 +63,7 @@ function NormalLayout() {
           </ul>
         </div>
         <div className={styles.bottom}>
-          <h4>Kehinde Odubunmi</h4>
+          <h3>Kenny Godman</h3>
           <h5>
             <Link to="/login">Logout</Link>
           </h5>

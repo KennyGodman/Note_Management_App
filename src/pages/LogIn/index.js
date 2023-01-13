@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/common/Button";
 import TextInput from "../../components/common/TextInput";
 import AuthLayout from "../../components/layouts/AuthLayout";
+import ForgotPassword from "../ForgotPassword";
 import EmptyPage from "../Home/EmptyPage";
 import styles from "./styles.module.css";
 
@@ -54,7 +55,7 @@ function LoginPage() {
                 </Field>
 
                 <p className={styles.forgot}>
-                  <Link to={EmptyPage}>Forgot Password?</Link>
+                  <Link to="/forgotPassword">Forgot Password?</Link>
                 </p>
 
                 <div className="mt-40">
