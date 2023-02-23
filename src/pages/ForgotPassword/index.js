@@ -38,8 +38,10 @@ function ForgotPassword() {
               </Field>
 
               <div className="mt-40">
+                
                 <p>
                   <Button text="SEND" />
+
                   <Link to="/forgotPassword"></Link>
                 </p>
               </div>

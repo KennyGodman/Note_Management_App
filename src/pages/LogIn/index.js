@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { Field, Form, Formik } from "formik";
 import React from "react";
@@ -8,8 +9,27 @@ import AuthLayout from "../../components/layouts/AuthLayout";
 import ForgotPassword from "../ForgotPassword";
 import EmptyPage from "../Home/EmptyPage";
 import styles from "./styles.module.css";
+import axios from "axios";
 
 function LoginPage() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const baseUrl = "";
+
+  useEffect(() => {
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const post = { email: email, password: password };
+      try {
+        const res = await axios.post(baseUrl, post);
+        console.log(res.data);
+      } catch (e) {
+        alert(e);
+      }
+    };
+  }, []);
+
   const initialValues = {
     email: "",
     password: "",
@@ -30,7 +50,7 @@ function LoginPage() {
           </Link>
         </p>
         <p>or</p>
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Formik initialValues={initialValues}>
           {() => (
             <Form>
               <div className="mt-40">
@@ -40,6 +60,8 @@ function LoginPage() {
                       placeholder="Email"
                       className="mt-40"
                       {...field}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   )}
                 </Field>
@@ -50,6 +72,8 @@ function LoginPage() {
                       className="mt-40"
                       type="password"
                       {...field}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   )}
                 </Field>
@@ -59,7 +83,7 @@ function LoginPage() {
                 </p>
 
                 <div className="mt-40">
-                  <Button text="Log in" />
+                  <Button text="Log in" onSubmit={handleSubmit} />
                 </div>
 
                 <p className="mt-40">

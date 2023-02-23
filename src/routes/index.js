@@ -17,6 +17,7 @@ function AllRoute() {
       <Routes>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/" element={<NormalLayout />}>
           <Route path="" element={<HomePage />} />
           <Route path="/tasks" element={<TaskPage />} />
@@ -24,7 +25,6 @@ function AllRoute() {
           <Route path="/favourite" element={<FavouritePage />} />
           <Route path="/emptyPage" element={<EmptyPage />} />
           <Route path="/blankPage" element={<BlankPage />} />
-          <Route path="/forgotPassword" element={<ForgotPassword />} />
         </Route>
       </Routes>
     </BrowserRouter>

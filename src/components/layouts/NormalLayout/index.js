@@ -9,7 +9,7 @@ function NormalLayout() {
     <div className={styles.container}>
       <aside className={styles.sidebar}>
         <div>
-          <img src={images.logo} alt="logo" className={styles.logo} />
+          <Link to="/"><img src={images.logo} alt="logo" className={styles.logo} /></Link>
           <ul className={styles.nav}>
             <li className={styles.active}>
               <Link to="/emptyPage">
